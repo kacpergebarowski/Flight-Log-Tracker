@@ -38,10 +38,14 @@ function displayFlight(flight) {
 
   const newRow = table.insertRow();
 
-  newRow.insertCell(0).innerHTML = flight.date;
-  newRow.insertCell(1).innerHTML = flight.aircraft;
-  newRow.insertCell(2).innerHTML = flight.route;
-  newRow.insertCell(3).innerHTML = flight.hours;
+newRow.insertCell(0).innerHTML = flight.date;
+newRow.insertCell(1).innerHTML = flight.aircraft;
+newRow.insertCell(2).innerHTML = flight.route;
+newRow.insertCell(3).innerHTML = flight.hours;
+
+const deleteCell = newRow.insertCell(4);
+
+deleteCell.innerHTML = "<button onclick='deleteFlight(this, " + flight.hours + ")'>Delete</button>";
 
   total = total + parseFloat(flight.hours);
 
@@ -55,4 +59,13 @@ function loadFlights() {
   for (let i = 0; i < flights.length; i++) {
     displayFlight(flights[i]);
   }
+  function deleteFlight(button, hours) {
+
+  const row = button.parentNode.parentNode;
+
+  row.remove();
+
+  total = total - parseFloat(hours);
+
+  document.getElementById("totalHours").innerHTML = total;
 }
