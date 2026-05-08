@@ -1,23 +1,38 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+  background: linear-gradient(to bottom, #87ceeb, #f4f4f4);
   padding: 20px;
+  margin: 0;
+}
+
+h1, p {
+  text-align: center;
 }
 
 h1 {
   color: #003366;
+  font-size: 36px;
+  margin-bottom: 5px;
+}
+
+p {
+  font-size: 18px;
+  color: #333;
 }
 
 input {
-  padding: 8px;
-  margin: 5px;
+  padding: 10px;
+  margin: 6px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 button {
-  padding: 8px 12px;
+  padding: 10px 14px;
   background-color: #003366;
   color: white;
   border: none;
+  border-radius: 5px;
   cursor: pointer;
 }
 
@@ -45,4 +60,5 @@ th {
 
 h2, h3 {
   margin-top: 20px;
+  color: #003366;
 }
