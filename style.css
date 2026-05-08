@@ -5,6 +5,10 @@ body {
   margin: 0;
 }
 
+form {
+  text-align: center;
+}
+
 h1, p {
   text-align: center;
 }
@@ -41,10 +45,12 @@ button:hover {
 }
 
 table {
-  width: 100%;
+  width: 95%;
+  margin: 20px auto;
   border-collapse: collapse;
-  margin-top: 20px;
   background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 th, td {
@@ -61,4 +67,5 @@ th {
 h2, h3 {
   margin-top: 20px;
   color: #003366;
+  text-align: center;
 }
