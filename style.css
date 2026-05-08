@@ -1,6 +1,11 @@
+html, body {
+  min-height: 100%;
+}
+
 body {
   font-family: Arial, sans-serif;
-  background: linear-gradient(to bottom, #87ceeb, #f4f4f4);
+  background: linear-gradient(to bottom, #87ceeb, #dff6ff);
+  background-attachment: fixed;
   padding: 20px;
   margin: 0;
 }
