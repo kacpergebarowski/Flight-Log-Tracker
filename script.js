@@ -20,4 +20,9 @@ function addFlight() {
 
   document.getElementById("totalHours").innerHTML = total;
 
+  document.getElementById("date").value = "";
+  document.getElementById("aircraft").value = "";
+  document.getElementById("route").value = "";
+  document.getElementById("hours").value = "";
+  
 }
