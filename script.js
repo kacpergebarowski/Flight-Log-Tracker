@@ -59,6 +59,7 @@ function loadFlights() {
   for (let i = 0; i < flights.length; i++) {
     displayFlight(flights[i]);
   }
+}
   function deleteFlight(button, hours) {
 
   const row = button.parentNode.parentNode;
