@@ -1,5 +1,9 @@
 let total = 0;
 
+window.onload = function () {
+  loadFlights();
+};
+
 function addFlight() {
 
   const date = document.getElementById("date").value;
@@ -7,22 +11,48 @@ function addFlight() {
   const route = document.getElementById("route").value;
   const hours = document.getElementById("hours").value;
 
-  const table = document.getElementById("flightTable");
+  const flight = {
+    date: date,
+    aircraft: aircraft,
+    route: route,
+    hours: hours
+  };
 
-  const newRow = table.insertRow();
+  let flights = JSON.parse(localStorage.getItem("flights")) || [];
 
-  newRow.insertCell(0).innerHTML = date;
-  newRow.insertCell(1).innerHTML = aircraft;
-  newRow.insertCell(2).innerHTML = route;
-  newRow.insertCell(3).innerHTML = hours;
+  flights.push(flight);
 
-  total = total + parseFloat(hours);
+  localStorage.setItem("flights", JSON.stringify(flights));
 
-  document.getElementById("totalHours").innerHTML = total;
+  displayFlight(flight);
 
   document.getElementById("date").value = "";
   document.getElementById("aircraft").value = "";
   document.getElementById("route").value = "";
   document.getElementById("hours").value = "";
-  
+}
+
+function displayFlight(flight) {
+
+  const table = document.getElementById("flightTable");
+
+  const newRow = table.insertRow();
+
+  newRow.insertCell(0).innerHTML = flight.date;
+  newRow.insertCell(1).innerHTML = flight.aircraft;
+  newRow.insertCell(2).innerHTML = flight.route;
+  newRow.insertCell(3).innerHTML = flight.hours;
+
+  total = total + parseFloat(flight.hours);
+
+  document.getElementById("totalHours").innerHTML = total;
+}
+
+function loadFlights() {
+
+  let flights = JSON.parse(localStorage.getItem("flights")) || [];
+
+  for (let i = 0; i < flights.length; i++) {
+    displayFlight(flights[i]);
+  }
 }
