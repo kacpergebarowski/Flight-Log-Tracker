@@ -6,8 +6,8 @@ A simple web application designed to help student pilots track flight informatio
 ## Features
 - Add flight entries
 - Store flight data in browser local storage
-- Delete entries
-- Automatically calculate total hours
+- Delete flight entries
+- Automatically calculate total flight hours
 - Track:
   - Aircraft type
   - Aircraft identification
