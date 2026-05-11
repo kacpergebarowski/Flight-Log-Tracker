@@ -1,5 +1,12 @@
 # Flight Log Tracker
 
+## Project Proposal Reference
+
+Original Class Project Proposal:
+https://kacpergebarowski.github.io/Class-Project-Proposal/
+
+The completed Flight Log Tracker project successfully delivered the main goals described in the original proposal. The final application allows users to add, view, and delete flight entries while automatically calculating total flight hours. Additional features such as browser local storage, aircraft identification tracking, departure and arrival airport fields, and remarks were also implemented to make the application more realistic and useful for student pilots.
+
 ## Description
 A simple web application designed to help student pilots track flight information and total flight hours.
 
